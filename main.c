@@ -6,17 +6,17 @@
 int main (){
     char caracter = '\0';
     printf("Ingrese texto a procesar: ");
-    while (caracter != '\n'){
+    while (caracter != EOF){
         caracter = getchar();
         if(!isdigit(caracter)){
             if(caracter == toupper(caracter)) 
-                printf("%c", tolower(caracter));
+               putchar(tolower(caracter));
 
             else if(caracter == tolower(caracter))
-                printf("%c", toupper(caracter));
+                 putchar(toupper(caracter));
 
             else 
-                printf("%c", caracter);
+                 putchar(caracter);
         }        
     }    
     return EXIT_SUCCESS;
